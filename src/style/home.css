@@ -309,4 +309,220 @@ nav ul:last-child li:hover a {
   top: -75%;
   z-index: -1;
 }
+
+.signup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  height: 100vh;
+  background: linear-gradient(106.32deg, rgba(0, 0, 0, 0.34) 0%, rgba(0, 0, 0, 0.34) 100%);
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
+  display: none;
+  place-items: center;
+}
+
+.signup form {
+  width: 50.1rem;
+  background-color: white;
+  -webkit-box-shadow: 9.39709px 25.3119px 63px rgba(0, 0, 0, 0.01);
+          box-shadow: 9.39709px 25.3119px 63px rgba(0, 0, 0, 0.01);
+  border-radius: 2rem;
+  padding: 3.3rem 3.4rem;
+}
+
+.signup form h3 {
+  font-family: 'DM Sans';
+  font-weight: 500;
+  font-size: 3.2rem;
+  text-align: center;
+  padding-bottom: 4.6rem;
+}
+
+.signup form p {
+  position: relative;
+  font-family: 'DM Sans';
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: black;
+  padding-bottom: .2rem;
+}
+
+.signup form p #usericon {
+  position: absolute;
+  font-size: 3rem;
+  bottom: -40px;
+  left: 15px;
+  color: #9C9C9C;
+}
+
+.signup form p #showpassword {
+  position: absolute;
+  font-size: 3rem;
+  bottom: -42px;
+  right: 15px;
+  color: #9C9C9C;
+}
+
+.signup form input[type=text], .signup form input[type=password], .signup form input[type=submit], .signup form input[type=email] {
+  width: 100%;
+  margin-bottom: 3rem;
+  padding: 1.5rem 1.5rem 1.5rem 6rem;
+  outline: none;
+  border: 1px solid #BABABA;
+  border-radius: .4rem;
+  font-family: 'DM Sans';
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+.signup form input[type=submit] {
+  font-family: 'DM Sans';
+  font-weight: 700;
+  font-size: 1.8rem;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1.9rem;
+  padding: 1.5rem 0rem;
+  color: #FFFFFF;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.signup form input[type=submit]:hover {
+  background-color: #7d28c8 !important;
+}
+
+.signup form a {
+  width: 100%;
+  font-family: 'DM Sans';
+  font-weight: 500;
+  font-size: 1.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #000000;
+}
+
+.login {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  height: 100vh;
+  background: linear-gradient(106.32deg, rgba(0, 0, 0, 0.34) 0%, rgba(0, 0, 0, 0.34) 100%);
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
+  display: none;
+  place-items: center;
+}
+
+.login form {
+  width: 50.1rem;
+  background-color: white;
+  -webkit-box-shadow: 9.39709px 25.3119px 63px rgba(0, 0, 0, 0.01);
+          box-shadow: 9.39709px 25.3119px 63px rgba(0, 0, 0, 0.01);
+  border-radius: 2rem;
+  padding: 3.3rem 3.4rem;
+}
+
+.login form h3 {
+  font-family: 'DM Sans';
+  font-weight: 500;
+  font-size: 3.2rem;
+  text-align: center;
+  padding-bottom: 4.6rem;
+}
+
+.login form p {
+  position: relative;
+  font-family: 'DM Sans';
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: black;
+  padding-bottom: .2rem;
+}
+
+.login form p #usericon {
+  position: absolute;
+  font-size: 3rem;
+  bottom: -40px;
+  left: 15px;
+  color: #9C9C9C;
+}
+
+.login form p #showpassword {
+  position: absolute;
+  font-size: 3rem;
+  bottom: -42px;
+  right: 15px;
+  color: #9C9C9C;
+}
+
+.login form input[type=text], .login form input[type=password], .login form input[type=submit] {
+  width: 100%;
+  margin-bottom: 3rem;
+  padding: 1.5rem 1.5rem 1.5rem 6rem;
+  outline: none;
+  border: 1px solid #BABABA;
+  border-radius: .4rem;
+  font-family: 'DM Sans';
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+.login form input[type=submit] {
+  font-family: 'DM Sans';
+  font-weight: 700;
+  font-size: 1.8rem;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1.9rem;
+  padding: 1.5rem 0rem;
+  color: #FFFFFF;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.login form input[type=submit]:hover {
+  background-color: #7d28c8 !important;
+}
+
+.login form a {
+  width: 100%;
+  font-family: 'DM Sans';
+  font-weight: 500;
+  font-size: 1.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #000000;
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 998px) {
+  html {
+    font-size: 40%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 35%;
+  }
+}
 /*# sourceMappingURL=home.css.map */
