@@ -51,3 +51,74 @@ const login = () => {
     }
 }
 login();
+
+const validation = () => {
+    const username = document.getElementById("sign_username");
+    const email = document.getElementById("sign_email");
+    const password = document.getElementById("sign_password");
+    const visibility = document.getElementById("showpassword");
+    username.onfocus = () => {
+        document.getElementsByClassName("icon")[0].style.color = "#7d28c8";
+        username.onblur = () => {
+            document.getElementsByClassName("icon")[0].style.color = "#9C9C9C";
+        }
+    }
+    email.onfocus = () => {
+        document.getElementsByClassName("icon")[1].style.color = "#7d28c8";
+        email.onblur = () => {
+            document.getElementsByClassName("icon")[1].style.color = "#9C9C9C";
+        }
+    }
+    password.onfocus = () => {
+        document.getElementsByClassName("icon")[2].style.color = "#7d28c8";
+        document.getElementById("showpassword").style.color = "#7d28c8";
+        password.onblur = () => {
+            document.getElementsByClassName("icon")[2].style.color = "#9C9C9C";
+            document.getElementById("showpassword").style.color = "#9C9C9C";
+            if(password.value.length == 0) {
+                document.getElementById("password_error").innerHTML = "";
+            }
+        }
+    }
+    visibility.onclick = () => {
+        if(visibility.innerHTML == "visibility"){
+            visibility.innerHTML = "visibility_off";
+            password.type = "password";
+        }
+        else{
+            visibility.innerHTML = "visibility";
+            password.type = "text";
+        }
+    }
+
+    document.getElementById("generate").onclick = () => {
+        let pattern = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$';
+        let length = pattern.length;
+        let pass="";
+        for(let i=0;i<8;i++){
+            var char = Math.floor(Math.random()* length + 1);
+            pass += pattern.charAt(char);
+        }
+        document.getElementById("sign_password").value = pass;
+        password.style.border = "2px solid #006931";
+        document.getElementById("password_error").innerHTML = "<span class='material-symbols-outlined' style='color:#006931;font-size:18px'>Done</span>";
+    }
+
+    password.onchange = () => {
+        if(password.value.length < 6 && password.value.length > 0) {
+            password.style.border = "2px solid #B10404";
+            document.getElementById("password_error").style.color = "#B10404";
+            document.getElementById("password_error").innerHTML = "<span class='material-symbols-outlined' style='color:#B10404;font-size:18px'>warning</span> Minimum 6 characters are required";
+        }
+        else{
+            password.style.border = "2px solid #006931";
+            document.getElementById("password_error").style.color = "#006931";
+            document.getElementById("password_error").innerHTML = "<span class='material-symbols-outlined' style='color:#006931;font-size:18px'>Done</span>";
+            document.getElementById("showpassword").style.color = "#006931"
+        }
+    }
+
+    
+}
+
+validation();

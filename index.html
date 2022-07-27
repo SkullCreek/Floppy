@@ -35,9 +35,9 @@
                     <p>Store, Share, and manage files and folders from your mobile device, tablet, or computer</p>
                     <button id="signbtn2">Get Started</button>
                 </div>
-                <aside class="component-1"></aside>
-                <aside class="component-2"></aside>
-                <aside class="component-3"></aside>
+                <!-- <aside class="component-1"></aside> -->
+                <!-- <aside class="component-2"></aside> -->
+                <!-- <aside class="component-3"></aside> -->
                 <aside class="component-4"></aside>
                 <aside class="component-5"></aside>
             </section>
@@ -46,12 +46,15 @@
     <section class="signup" id="signup">
         <form id="form" class="animate__animated animate__faster">
             <h3>Signup for a free<br>Floppy account.</h3>
-            <p id="username" ><span id="usericon" class="material-symbols-outlined">person</span>Username</p>
-            <input type="text" required="required" id="sign_email" placeholder="Darpan Bahadur">
-            <p id="email"><span id="usericon" style="font-size: 2.7rem;" class="material-symbols-outlined">alternate_email</span>Email Address</p>
-            <input type="email" required="required" id="sign_email" placeholder="darpan.bahadur@example.com">
-            <p id="password"><span id="usericon" style="font-size: 2.7rem;" class="material-symbols-outlined">lock</span><span id="showpassword" class="material-symbols-outlined">visibility</span>Password</p>
-            <input type="password" id="sign_password" required="required" placeholder="Must have minimum 6 characters">
+            <p id="username" ><span id="usericon" class="material-symbols-outlined icon">person</span>Username</p>
+            <input type="text" class="input" required="required" id="sign_username" placeholder="Darpan Bahadur">
+            <pre id="username_error"></pre>
+            <p id="email"><span id="usericon" style="font-size: 2.7rem;" class="material-symbols-outlined icon">alternate_email</span>Email Address</p>
+            <input type="email" class="input" required="required" id="sign_email" placeholder="darpan.bahadur@example.com">
+            <pre id="email_error"></pre>
+            <p id="password"><span id="usericon" style="font-size: 2.7rem;" class="material-symbols-outlined icon">lock</span><span id="showpassword" class="material-symbols-outlined icon">visibility_off</span>Password<button id="generate">Generate</button></p>
+            <input type="password" class="input" id="sign_password" required="required" placeholder="Must have minimum 6 characters">
+            <pre id="password_error"></pre>
             <input type="submit" id="register" value="Register" style="border: none; background: #9733EE; color: white; ">
             <a href="#">Already a member? login</a>
         </form>
@@ -60,9 +63,11 @@
         <form id="form2" class="animate__animated animate__faster">
             <h3>Login with<br>Floppy.</h3>
             <p id="email"><span id="usericon" style="font-size: 2.7rem;" class="material-symbols-outlined">alternate_email</span>Email Address</p>
-            <input type="text" required="required" id="login_email" placeholder="Darpan">
+            <input type="email" class="input" required="required" id="login_email" placeholder="Darpan">
+            <pre id="login_email_error"></pre>
             <p id="password"><span id="usericon" style="font-size: 2.7rem;" class="material-symbols-outlined">lock</span><span id="showpassword" class="material-symbols-outlined">visibility</span>Password</p>
-            <input type="password" required="required" id="login_password" placeholder="Darpan@1977.">
+            <input type="password" class="input" required="required" id="login_password" placeholder="Darpan@1977.">
+            <pre id="login_password_error"></pre>
             <input type="submit"  value="login" style="border: none; background: #9733EE; color: white; ">
             <a href="#">Don't have account? Signup</a>
         </form>
