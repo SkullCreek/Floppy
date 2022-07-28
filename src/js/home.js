@@ -114,7 +114,7 @@ const validation = () => {
             password.style.border = "2px solid #006931";
             document.getElementById("password_error").style.color = "#006931";
             document.getElementById("password_error").innerHTML = "<span class='material-symbols-outlined' style='color:#006931;font-size:18px'>Done</span>";
-            document.getElementById("showpassword").style.color = "#006931"
+            document.getElementById("showpassword").style.color = "#006931";
         }
     }
 

@@ -358,13 +358,19 @@ nav ul:last-child li:hover a {
   color: #9C9C9C;
 }
 
-.signup form p #showpassword {
+.signup form p #showpassword, .signup form p #loader {
   position: absolute;
   font-size: 3rem;
   bottom: -42px;
   right: 15px;
   color: #9C9C9C;
   cursor: pointer;
+}
+
+.signup form p #loader {
+  bottom: -37px;
+  display: none;
+  font-size: 1.8rem;
 }
 
 .signup form p #generate {
@@ -403,7 +409,7 @@ nav ul:last-child li:hover a {
 .signup form input[type=text], .signup form input[type=password], .signup form input[type=submit], .signup form input[type=email] {
   width: 100%;
   margin-bottom: 3rem;
-  padding: 1.5rem 1.5rem 1.5rem 6rem;
+  padding: 1.5rem 4rem 1.5rem 6rem;
   outline: none;
   border: 2px solid #BABABA;
   border-radius: .4rem;
