@@ -51,35 +51,73 @@ const login = () => {
     }
 }
 login();
-
 const validation = () => {
     const username = document.getElementById("sign_username");
     const email = document.getElementById("sign_email");
     const password = document.getElementById("sign_password");
     const visibility = document.getElementById("showpassword");
     username.onfocus = () => {
+        username.style.border = "2px solid #7d28c8";
         document.getElementsByClassName("icon")[0].style.color = "#7d28c8";
-        username.onblur = () => {
-            document.getElementsByClassName("icon")[0].style.color = "#9C9C9C";
+        document.getElementById("username_error").innerHTML = "";   
+    }
+
+    username.onblur = () => {
+        if(username.value.length == 0){
+            username.style.border = "2px solid #B10404";
+            document.getElementsByClassName("icon")[0].style.color = "#B10404";
+            document.getElementById("username_error").style.color = "#B10404";
+            document.getElementById("username_error").innerHTML = "<span class='material-symbols-outlined' style='color:#B10404;font-size:18px'>warning</span> Username field is empty";
+        }
+        else{
+            username.style.border = "2px solid #006931";
+            document.getElementsByClassName("icon")[0].style.color = "#006931";
+            document.getElementById("username_error").style.color = "#006931";
+            document.getElementById("username_error").innerHTML = "<span class='material-symbols-outlined' style='color:#006931;font-size:18px'>Done</span>";
         }
     }
+
     email.onfocus = () => {
-        document.getElementsByClassName("icon")[1].style.color = "#7d28c8";
-        email.onblur = () => {
-            document.getElementsByClassName("icon")[1].style.color = "#9C9C9C";
-        }
+        email.style.border = "2px solid #7d28c8";
+        document.getElementsByClassName("icon")[1].style.color = "#7d28c8"; 
+        document.getElementById("email_error").innerHTML = "";   
     }
     password.onfocus = () => {
+        password.style.border = "2px solid #7d28c8";
         document.getElementsByClassName("icon")[2].style.color = "#7d28c8";
         document.getElementById("showpassword").style.color = "#7d28c8";
-        password.onblur = () => {
-            document.getElementsByClassName("icon")[2].style.color = "#9C9C9C";
-            document.getElementById("showpassword").style.color = "#9C9C9C";
-            if(password.value.length == 0) {
-                document.getElementById("password_error").innerHTML = "";
+        document.getElementById("password_error").innerHTML = "";
+    }
+
+    password.onblur = () => {
+        
+        if(password.value.length == 0) {
+            document.getElementsByClassName("icon")[2].style.color = "#B10404";
+            document.getElementById("showpassword").style.color = "#B10404";
+            password.style.border = "2px solid #B10404";
+            document.getElementById("password_error").style.color = "#B10404";
+            document.getElementById("password_error").innerHTML = "<span class='material-symbols-outlined' style='color:#B10404;font-size:18px'>warning</span> Password field is empty";
+        }
+        else{
+            if(password.value.length <= 6 && password.value.length > 0) {
+                document.getElementsByClassName("icon")[2].style.color = "#B10404";
+                document.getElementById("showpassword").style.color = "#B10404";
+                password.style.border = "2px solid #B10404";
+                document.getElementById("password_error").style.color = "#B10404";
+                document.getElementById("password_error").innerHTML = "<span class='material-symbols-outlined' style='color:#B10404;font-size:18px'>warning</span> Minimum 6 characters are required";
+            }
+            else{
+                document.getElementsByClassName("icon")[2].style.color = "#006931";
+                document.getElementById("showpassword").style.color = "#006931";
+                password.style.border = "2px solid #006931";
+                document.getElementById("password_error").style.color = "#006931";
+                document.getElementById("password_error").innerHTML = "<span class='material-symbols-outlined' style='color:#006931;font-size:18px'>Done</span>";
+                document.getElementById("showpassword").style.color = "#006931";
             }
         }
+        
     }
+
     visibility.onclick = () => {
         if(visibility.innerHTML == "visibility"){
             visibility.innerHTML = "visibility_off";
@@ -100,24 +138,13 @@ const validation = () => {
             pass += pattern.charAt(char);
         }
         document.getElementById("sign_password").value = pass;
+        document.getElementsByClassName("icon")[2].style.color = "#006931";
+        document.getElementById("showpassword").style.color = "#006931";
         password.style.border = "2px solid #006931";
+        document.getElementById("password_error").style.color = "#006931";
         document.getElementById("password_error").innerHTML = "<span class='material-symbols-outlined' style='color:#006931;font-size:18px'>Done</span>";
+        document.getElementById("showpassword").style.color = "#006931";
     }
-
-    password.onchange = () => {
-        if(password.value.length < 6 && password.value.length > 0) {
-            password.style.border = "2px solid #B10404";
-            document.getElementById("password_error").style.color = "#B10404";
-            document.getElementById("password_error").innerHTML = "<span class='material-symbols-outlined' style='color:#B10404;font-size:18px'>warning</span> Minimum 6 characters are required";
-        }
-        else{
-            password.style.border = "2px solid #006931";
-            document.getElementById("password_error").style.color = "#006931";
-            document.getElementById("password_error").innerHTML = "<span class='material-symbols-outlined' style='color:#006931;font-size:18px'>Done</span>";
-            document.getElementById("showpassword").style.color = "#006931";
-        }
-    }
-
     
 }
 
