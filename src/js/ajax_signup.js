@@ -1,14 +1,29 @@
-
-
 const user_register = document.getElementById("register");
-user_register.onclick = () => {
+user_register.onclick = (e) => {
+    user_register.value = "";
+    document.getElementById("loading").style.display = "block";
+    user_register.style.backgroundColor = "#8c8c8c";
+    user_register.setAttribute("disabled","disabled");
     const username = document.getElementById("sign_username");
     const email = document.getElementById("sign_email");
     const password = document.getElementById("sign_password");
     if(username.value.length != 0){
         if(email.value.length != 0){
             if(password.value.length != 0 && password.value.length > 5){
-                alert("success");
+                const request = new XMLHttpRequest();
+                request.open("POST","src/backend/database/signup.php",true);
+                request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                request.send(`username=${btoa(username.value)}&email=${btoa(email.value)}&password=${btoa(password.value)}`);
+                request.onreadystatechange = () => {
+                    if(request.readyState == 4 && request.status == 200){
+                        user_register.value = "Register";
+                        document.getElementById("loading").style.display = "none";
+                        user_register.style.backgroundColor = "#9733EE";
+                        user_register.removeAttribute("disabled");
+
+                        //code from here
+                    }
+                }
             }
             else{
                 document.getElementsByClassName("icon")[2].style.color = "#B10404";

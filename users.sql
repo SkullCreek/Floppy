@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 28, 2022 at 05:46 AM
+-- Generation Time: Jul 29, 2022 at 11:46 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.28
 
@@ -31,7 +31,7 @@ CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `fullname` varchar(100) DEFAULT NULL,
   `email` varchar(100) DEFAULT NULL,
-  `password` varchar(100) DEFAULT NULL,
+  `pass` varchar(100) DEFAULT NULL,
   `reg_date` datetime DEFAULT curtime(),
   `activation_code` varchar(11) DEFAULT NULL,
   `plans` varchar(11) DEFAULT 'free',

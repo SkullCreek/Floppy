@@ -13,7 +13,6 @@ const check_user = () => {
         }
         else{
             if(email.value.indexOf("@") != -1 ){
-
                 const httpreq = new XMLHttpRequest();
                 httpreq.open("POST","src/backend/database/check_user.php",true);
                 httpreq.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -24,7 +23,8 @@ const check_user = () => {
                 httpreq.onreadystatechange = () => {
                     if(httpreq.readyState == 4 && httpreq.status == 200){
                         loader.style.display="none";
-                        if(httpreq.response.trim()=="user found"){
+                        console.log(httpreq.response.trim());
+                        if(httpreq.response.trim()=="User already exists"){
                             document.getElementsByClassName("icon")[1].style.color = "#B10404";
                             email.style.border = "2px solid #B10404";
                             document.getElementById("email_error").style.color = "#B10404";
