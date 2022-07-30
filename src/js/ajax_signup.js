@@ -20,8 +20,36 @@ user_register.onclick = (e) => {
                         document.getElementById("loading").style.display = "none";
                         user_register.style.backgroundColor = "#9733EE";
                         user_register.removeAttribute("disabled");
-
-                        //code from here
+                        if(request.response.trim() == "sending success"){
+                            // username.value = "";
+                            // email.value = "";
+                            // password.value = "";
+                            // username.style.border = "border: 2px solid #BABABA;";
+                            // document.getElementsByClassName("icon")[0].style.color = "#9C9C9C";
+                            // document.getElementById("username_error").innerHTML = ""; 
+                            // email.style.border = "border: 2px solid #BABABA;";
+                            // document.getElementsByClassName("icon")[1].style.color = "#9C9C9C"; 
+                            // document.getElementById("email_error").innerHTML = "";
+                            // password.style.border = "border: 2px solid #BABABA;";
+                            // document.getElementsByClassName("icon")[2].style.color = "#9C9C9C";
+                            // document.getElementById("showpassword").style.color = "#9C9C9C";
+                            // document.getElementById("password_error").innerHTML = "";  
+                            let form = document.getElementById("form");
+                            let form2 = document.getElementById("form2");
+                            form.classList.remove("animate__zoomIn");
+                            form.classList.add("animate__zoomOut");
+                            setTimeout(()=>{
+                                form.style.display = "none";
+                                form2.style.display = "grid";
+                                form2.classList.remove("animate__zoomOut");
+                                form2.classList.add("animate__zoomIn");
+                                let email_id_code = document.getElementById("email_id_code");
+                                email_id_code.innerHTML = email.value;
+                            },500);
+                        }
+                        else{
+                            alert("Email not valid");
+                        }
                     }
                 }
             }

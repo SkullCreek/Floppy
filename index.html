@@ -58,6 +58,20 @@
             <aside id="loading"><div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div></aside>
             <a href="#">Already a member? login</a>
         </form>
+        <form action="" id="form2" class="animate__animated animate__faster">
+            <h3>Varification code</h3>
+            <p>Enter the varification code you received to</p>
+            <h4 id="email_id_code">darpan@gmail.com</h4>
+            <div>
+                <input type="number" id="a" name="" class="code" maxlength="1" onkeyup="otp(this, 'b')">
+                <input type="number" id="b" name="" class="code" maxlength="1" onkeyup="otp(this, 'c')">
+                <input type="number" id="c" name="" class="code" maxlength="1" onkeyup="otp(this, 'd')">
+                <input type="number" id="d" name="" class="code" maxlength="1">
+            </div>
+            <h5 id="varify_error"></h5>
+            <button>Verify</button>
+            <a href="#">Change your email?</a>
+        </form>
     </section>
     <section class="login" id="login" >
         <form id="form2" class="animate__animated animate__faster">
@@ -75,5 +89,6 @@
     <script src="src/js/home.js"></script>
     <script src="src/js/ajax_check_user.js"></script>
     <script src="src/js/ajax_signup.js"></script>
+    <script src="src/js/otp.js"></script>
 </body>
 </html>

@@ -468,6 +468,119 @@ nav ul:last-child li:hover a {
   color: #000000;
 }
 
+.signup #form2 {
+  display: none;
+  width: 50.1rem;
+  background-color: white;
+  -webkit-box-shadow: 9.39709px 25.3119px 63px rgba(0, 0, 0, 0.01);
+          box-shadow: 9.39709px 25.3119px 63px rgba(0, 0, 0, 0.01);
+  border-radius: 2rem;
+  padding: 3.3rem 3.4rem;
+}
+
+.signup #form2 h3 {
+  font-family: 'DM Sans';
+  font-weight: 500;
+  font-size: 3.2rem;
+  text-align: center;
+  padding-bottom: 6.5rem;
+}
+
+.signup #form2 p {
+  font-family: 'DM Sans';
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: #858585;
+  padding-bottom: .63rem;
+}
+
+.signup #form2 h4 {
+  font-family: 'DM Sans';
+  font-weight: 700;
+  font-size: 16px;
+  color: #000000;
+  padding-bottom: 3.38rem;
+}
+
+.signup #form2 div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.signup #form2 div .code {
+  width: 8rem;
+  height: 8rem;
+  border: none;
+  border-radius: .5rem;
+  background: #ECE8F0;
+  font-family: 'DM Sans';
+  font-weight: 500;
+  font-size: 3.2rem;
+  text-align: center;
+}
+
+.signup #form2 div .code:focus {
+  outline: 2px solid #9733EE;
+}
+
+.signup #form2 div input[type=number]::-webkit-inner-spin-button,
+.signup #form2 div input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.signup #form2 h5 {
+  font-family: 'DM Sans';
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin-top: 1.1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 2.1rem;
+}
+
+.signup #form2 button {
+  width: 100%;
+  border-radius: .4rem;
+  font-family: 'DM Sans';
+  font-weight: 700;
+  font-size: 1.8rem;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1.9rem;
+  padding: 1.5rem 0rem;
+  color: #FFFFFF;
+  cursor: pointer;
+  border: none;
+  background-color: #9733EE;
+}
+
+.signup #form2 button:hover {
+  background-color: #7d28c8 !important;
+  -webkit-box-shadow: 5.5303px 12.8614px 27px rgba(0, 0, 0, 0.31);
+          box-shadow: 5.5303px 12.8614px 27px rgba(0, 0, 0, 0.31);
+}
+
+.signup #form2 button:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-box-shadow: 6.25331px 7.8036px 34px rgba(0, 0, 0, 0.2);
+          box-shadow: 6.25331px 7.8036px 34px rgba(0, 0, 0, 0.2);
+  -webkit-transition: .01s;
+  transition: .01s;
+}
+
 .login {
   position: absolute;
   top: 0;

@@ -23,7 +23,6 @@ const check_user = () => {
                 httpreq.onreadystatechange = () => {
                     if(httpreq.readyState == 4 && httpreq.status == 200){
                         loader.style.display="none";
-                        console.log(httpreq.response.trim());
                         if(httpreq.response.trim()=="User already exists"){
                             document.getElementsByClassName("icon")[1].style.color = "#B10404";
                             email.style.border = "2px solid #B10404";

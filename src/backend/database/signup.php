@@ -3,14 +3,14 @@
     use PHPMailer\PHPMailer\SMTP;
     use PHPMailer\PHPMailer\Exception;
 
-    require 'PHPMailer/src/Exception.php';
-    require 'PHPMailer/src/PHPMailer.php';
-    require 'PHPMailer/src/SMTP.php';
+    require '../plugins/PHPMailer/src/Exception.php';
+    require '../plugins/PHPMailer/src/PHPMailer.php';
+    require '../plugins/PHPMailer/src/SMTP.php';
     require("database.php");
     $username = base64_decode($_POST['username']);
     $email = base64_decode($_POST['email']);
     $password = md5($_POST['password']);
-    $pattern = "123456789";
+    $pattern = "392647518";
     $length = strlen($pattern)-1;
     $i;
     $code = [];
@@ -49,7 +49,7 @@
             $mail->AltBody = "";
 
             $mail->send();
-            echo 'Please Check your email to verify your email address';
+            echo 'sending success';
         } catch (Exception $e) {
             echo "Email not Valid";
         }
