@@ -21,19 +21,6 @@ user_register.onclick = (e) => {
                         user_register.style.backgroundColor = "#9733EE";
                         user_register.removeAttribute("disabled");
                         if(request.response.trim() == "sending success"){
-                            // username.value = "";
-                            // email.value = "";
-                            // password.value = "";
-                            // username.style.border = "border: 2px solid #BABABA;";
-                            // document.getElementsByClassName("icon")[0].style.color = "#9C9C9C";
-                            // document.getElementById("username_error").innerHTML = ""; 
-                            // email.style.border = "border: 2px solid #BABABA;";
-                            // document.getElementsByClassName("icon")[1].style.color = "#9C9C9C"; 
-                            // document.getElementById("email_error").innerHTML = "";
-                            // password.style.border = "border: 2px solid #BABABA;";
-                            // document.getElementsByClassName("icon")[2].style.color = "#9C9C9C";
-                            // document.getElementById("showpassword").style.color = "#9C9C9C";
-                            // document.getElementById("password_error").innerHTML = "";  
                             let form = document.getElementById("form");
                             let form2 = document.getElementById("form2");
                             form.classList.remove("animate__zoomIn");
@@ -48,7 +35,22 @@ user_register.onclick = (e) => {
                             },500);
                         }
                         else{
-                            alert("Email not valid");
+                            alert("Something went wrong please try again");
+                            let form = document.getElementById("form");
+                            form.reset();
+                            username.value = "";
+                            email.value = "";
+                            password.value = "";
+                            username.style.border = "border: 2px solid #BABABA;";
+                            document.getElementsByClassName("icon")[0].style.color = "#9C9C9C";
+                            document.getElementById("username_error").innerHTML = ""; 
+                            email.style.border = "border: 2px solid #BABABA;";
+                            document.getElementsByClassName("icon")[1].style.color = "#9C9C9C"; 
+                            document.getElementById("email_error").innerHTML = "";
+                            password.style.border = "border: 2px solid #BABABA;";
+                            document.getElementsByClassName("icon")[2].style.color = "#9C9C9C";
+                            document.getElementById("showpassword").style.color = "#9C9C9C";
+                            document.getElementById("password_error").innerHTML = "";  
                         }
                     }
                 }

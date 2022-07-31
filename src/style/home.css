@@ -502,7 +502,7 @@ nav ul:last-child li:hover a {
   padding-bottom: 3.38rem;
 }
 
-.signup #form2 div {
+.signup #form2 #otp_input {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -512,7 +512,7 @@ nav ul:last-child li:hover a {
           justify-content: space-between;
 }
 
-.signup #form2 div .code {
+.signup #form2 #otp_input .code {
   width: 8rem;
   height: 8rem;
   border: none;
@@ -524,12 +524,12 @@ nav ul:last-child li:hover a {
   text-align: center;
 }
 
-.signup #form2 div .code:focus {
+.signup #form2 #otp_input .code:focus {
   outline: 2px solid #9733EE;
 }
 
-.signup #form2 div input[type=number]::-webkit-inner-spin-button,
-.signup #form2 div input[type=number]::-webkit-outer-spin-button {
+.signup #form2 #otp_input input[type=number]::-webkit-inner-spin-button,
+.signup #form2 #otp_input input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;

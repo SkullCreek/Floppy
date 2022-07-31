@@ -61,15 +61,15 @@
         <form action="" id="form2" class="animate__animated animate__faster">
             <h3>Varification code</h3>
             <p>Enter the varification code you received to</p>
-            <h4 id="email_id_code">darpan@gmail.com</h4>
-            <div>
+            <h4 id="email_id_code"></h4>
+            <div id="otp_input">
                 <input type="number" id="a" name="" class="code" maxlength="1" onkeyup="otp(this, 'b')">
                 <input type="number" id="b" name="" class="code" maxlength="1" onkeyup="otp(this, 'c')">
                 <input type="number" id="c" name="" class="code" maxlength="1" onkeyup="otp(this, 'd')">
                 <input type="number" id="d" name="" class="code" maxlength="1">
             </div>
-            <h5 id="varify_error"></h5>
-            <button>Verify</button>
+            <h5 id="verify_error"></h5>
+            <button id="verify">Verify</button>
             <a href="#">Change your email?</a>
         </form>
     </section>
