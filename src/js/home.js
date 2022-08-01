@@ -32,17 +32,17 @@ signup();
 const login = () => {
     let log_btn = document.getElementById("logbtn");
     let login = document.getElementsByClassName("login");
-    let form2 = document.getElementById("form2");
+    let form4 = document.getElementById("form4");
     log_btn.onclick = () =>{
         login[0].style.display = "grid";
-        form2.classList.remove("animate__zoomOut");
-        form2.classList.add("animate__zoomIn");
+        form4.classList.remove("animate__zoomOut");
+        form4.classList.add("animate__zoomIn");
         return false;
     }
     login[0].onclick = function(e){
         if(e.target.id == 'login'){
-            form2.classList.remove("animate__zoomIn");
-            form2.classList.add("animate__zoomOut");
+            form4.classList.remove("animate__zoomIn");
+            form4.classList.add("animate__zoomOut");
             setTimeout(function(){
                 login[0].style.display = 'none';
             },400);
@@ -52,6 +52,10 @@ const login = () => {
 }
 login();
 const validation = () => {
+
+
+    //signup
+
     const username = document.getElementById("sign_username");
     const email = document.getElementById("sign_email");
     const password = document.getElementById("sign_password");
@@ -99,7 +103,7 @@ const validation = () => {
             document.getElementById("password_error").innerHTML = "<span class='material-symbols-outlined' style='color:#B10404;font-size:18px'>warning</span> Password field is empty";
         }
         else{
-            if(password.value.length <= 6 && password.value.length > 0) {
+            if(password.value.length < 6 && password.value.length > 0) {
                 document.getElementsByClassName("icon")[2].style.color = "#B10404";
                 document.getElementById("showpassword").style.color = "#B10404";
                 password.style.border = "2px solid #B10404";
@@ -146,6 +150,85 @@ const validation = () => {
         document.getElementById("showpassword").style.color = "#006931";
     }
     
+
+    //login
+    const login_email = document.getElementById("login_email");
+    const login_password = document.getElementById("login_password");
+    login_email.onfocus = () => {
+        login_email.style.border = "2px solid #7d28c8";
+        document.getElementsByClassName("icon2")[0].style.color = "#7d28c8";
+        document.getElementById("login_email_error").innerHTML = "";   
+    }
+    login_email.onblur = () => {
+        if(login_email.value.length == 0){
+            login_email.style.border = "2px solid #B10404";
+            document.getElementsByClassName("icon2")[0].style.color = "#B10404";
+            document.getElementById("login_email_error").style.color = "#B10404";
+            document.getElementById("login_email_error").innerHTML = "<span class='material-symbols-outlined' style='color:#B10404;font-size:18px'>warning</span> Username field is empty";
+        }
+        else{
+            if(login_email.value.indexOf("@gmail.com") != -1){
+                login_email.style.border = "2px solid #006931";
+                document.getElementsByClassName("icon2")[0].style.color = "#006931";
+                document.getElementById("login_email_error").style.color = "#006931";
+                document.getElementById("login_email_error").innerHTML = "<span class='material-symbols-outlined' style='color:#006931;font-size:18px'>Done</span>";
+            }
+            else{
+                login_email.style.border = "2px solid #B10404";
+                document.getElementsByClassName("icon2")[0].style.color = "#B10404";
+                document.getElementById("login_email_error").style.color = "#B10404";
+                document.getElementById("login_email_error").innerHTML = "<span class='material-symbols-outlined' style='color:#B10404;font-size:18px'>warning</span> Email should have @gmail.com";
+            }
+            
+        }
+    }
+    const visibility2 = document.getElementById("showpassword2");
+    visibility2.onclick = () => {
+        if(visibility2.innerHTML == "visibility"){
+            visibility2.innerHTML = "visibility_off";
+            login_password.type = "password";
+        }
+        else{
+            visibility2.innerHTML = "visibility";
+            login_password.type = "text";
+        }
+    }
+    login_password.onfocus = () => {
+        login_password.style.border = "2px solid #7d28c8";
+        document.getElementsByClassName("icon2")[1].style.color = "#7d28c8";
+        document.getElementsByClassName("icon2")[2].style.color = "#7d28c8";
+        document.getElementById("login_password_error").innerHTML = "";
+    }
+
+    login_password.onblur = () => {
+        
+        if(login_password.value.length == 0) {
+            document.getElementsByClassName("icon2")[1].style.color = "#B10404";
+            document.getElementsByClassName("icon2")[2].style.color = "#B10404";
+            login_password.style.border = "2px solid #B10404";
+            document.getElementById("login_password_error").style.color = "#B10404";
+            document.getElementById("login_password_error").innerHTML = "<span class='material-symbols-outlined' style='color:#B10404;font-size:18px'>warning</span> Password field is empty";
+        }
+        else{
+            if(login_password.value.length < 6 && login_password.value.length > 0) {
+                document.getElementsByClassName("icon2")[1].style.color = "#B10404";
+                document.getElementsByClassName("icon2")[2].style.color = "#B10404";
+                login_password.style.border = "2px solid #B10404";
+                document.getElementById("login_password_error").style.color = "#B10404";
+                document.getElementById("login_password_error").innerHTML = "<span class='material-symbols-outlined' style='color:#B10404;font-size:18px'>warning</span> Minimum 6 characters are required";
+            }
+            else{
+                document.getElementsByClassName("icon2")[1].style.color = "#006931";
+                document.getElementsByClassName("icon2")[2].style.color = "#006931";
+                login_password.style.border = "2px solid #006931";
+                document.getElementById("login_password_error").style.color = "#006931";
+                document.getElementById("login_password_error").innerHTML = "<span class='material-symbols-outlined' style='color:#006931;font-size:18px'>Done</span>";
+            }
+        }
+        
+    }
+
+
 }
 
 validation();

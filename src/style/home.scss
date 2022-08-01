@@ -263,12 +263,13 @@ nav{
     backdrop-filter: blur(30px);
     display: none;
     place-items: center;
-    form{
+    #form{
         width: 50.1rem;
         background-color: white;
         box-shadow: 9.39709px 25.3119px 63px rgba(0, 0, 0, 0.01);
         border-radius: 2rem;
         padding: 3.3rem 3.4rem;
+        // display: none;
         h3{
             font-family: 'DM Sans';
             font-weight: 500;
@@ -465,6 +466,33 @@ nav{
             box-shadow: 6.25331px 7.8036px 34px rgba(0, 0, 0, 0.20);
             transition: .01s;
         }
+        a{
+            width: 100%;
+            font-family: 'DM Sans';
+            font-weight: 500;
+            font-size: 1.8rem;
+            display: flex;
+            justify-content: center;
+            color: #000000;
+        }
+    }
+    #form3{
+        width: 50.1rem;
+        background-color: white;
+        box-shadow: 9.39709px 25.3119px 63px rgba(0, 0, 0, 0.01);
+        border-radius: 2rem;
+        padding: 3.3rem 3.4rem;
+        display: none;
+        place-items: center;
+        height: 47.8rem;
+        h1{
+            font-family: 'DM Sans';
+            font-weight: bold;
+            font-size: 3.2rem;
+            text-align: center;
+            color: #00C517;
+        }
+        
     }
 }
 
@@ -479,12 +507,13 @@ nav{
     backdrop-filter: blur(30px);
     display: none;
     place-items: center;
-    form{
+    #form4{
         width: 50.1rem;
         background-color: white;
         box-shadow: 9.39709px 25.3119px 63px rgba(0, 0, 0, 0.01);
         border-radius: 2rem;
         padding: 3.3rem 3.4rem;
+        position: relative;
         h3{
             font-family: 'DM Sans';
             font-weight: 500;
@@ -506,12 +535,13 @@ nav{
                 left: 15px;
                 color:#9C9C9C;
             }
-            #showpassword{
+            #showpassword2{
                 position: absolute;
                 font-size: 3rem;
                 bottom: -42px;
                 right: 15px;
                 color:#9C9C9C;
+                cursor: pointer;
             }
         }
         pre{
@@ -521,13 +551,15 @@ nav{
             position: absolute;
             transform: translateY(-26px);
             z-index: 4;
+            display: flex;
+            align-items: center;
         }
-        input[type=email],input[type=password],input[type=submit]{
+        input[type=text],input[type=email],input[type=password],input[type=submit]{
             width: 100%;
             margin-bottom: 3rem;
             padding: 1.5rem 1.5rem 1.5rem 6rem;
             outline: none;
-            border: 1px solid #BABABA;
+            border: 2px solid #BABABA;
             border-radius: .4rem;
             font-family: 'DM Sans';
             font-weight: 400;
@@ -584,6 +616,14 @@ nav{
 }
 
 #loading{
+    position: absolute;
+    z-index: 200;
+    bottom: 60px;
+    left: 50%;
+    transform: translate(-50%);
+    display: none;
+}
+#loading2{
     position: absolute;
     z-index: 4;
     bottom: 60px;

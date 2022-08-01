@@ -324,7 +324,7 @@ nav ul:last-child li:hover a {
   place-items: center;
 }
 
-.signup form {
+.signup #form {
   width: 50.1rem;
   background-color: white;
   -webkit-box-shadow: 9.39709px 25.3119px 63px rgba(0, 0, 0, 0.01);
@@ -333,7 +333,7 @@ nav ul:last-child li:hover a {
   padding: 3.3rem 3.4rem;
 }
 
-.signup form h3 {
+.signup #form h3 {
   font-family: 'DM Sans';
   font-weight: 500;
   font-size: 3.2rem;
@@ -341,7 +341,7 @@ nav ul:last-child li:hover a {
   padding-bottom: 4.6rem;
 }
 
-.signup form p {
+.signup #form p {
   position: relative;
   font-family: 'DM Sans';
   font-weight: 400;
@@ -350,7 +350,7 @@ nav ul:last-child li:hover a {
   padding-bottom: .2rem;
 }
 
-.signup form p #usericon {
+.signup #form p #usericon {
   position: absolute;
   font-size: 3rem;
   bottom: -40px;
@@ -358,7 +358,7 @@ nav ul:last-child li:hover a {
   color: #9C9C9C;
 }
 
-.signup form p #showpassword, .signup form p #loader {
+.signup #form p #showpassword, .signup #form p #loader {
   position: absolute;
   font-size: 3rem;
   bottom: -42px;
@@ -367,13 +367,13 @@ nav ul:last-child li:hover a {
   cursor: pointer;
 }
 
-.signup form p #loader {
+.signup #form p #loader {
   bottom: -37px;
   display: none;
   font-size: 1.8rem;
 }
 
-.signup form p #generate {
+.signup #form p #generate {
   position: absolute;
   right: 0;
   top: -5px;
@@ -385,12 +385,12 @@ nav ul:last-child li:hover a {
   border: none;
 }
 
-.signup form p #generate:activeshow {
+.signup #form p #generate:activeshow {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
 }
 
-.signup form pre {
+.signup #form pre {
   font-family: 'DM Sans';
   font-weight: 400;
   font-size: 1.2rem;
@@ -406,7 +406,7 @@ nav ul:last-child li:hover a {
           align-items: center;
 }
 
-.signup form input[type=text], .signup form input[type=password], .signup form input[type=submit], .signup form input[type=email] {
+.signup #form input[type=text], .signup #form input[type=password], .signup #form input[type=submit], .signup #form input[type=email] {
   width: 100%;
   margin-bottom: 3rem;
   padding: 1.5rem 4rem 1.5rem 6rem;
@@ -418,15 +418,15 @@ nav ul:last-child li:hover a {
   font-size: 1.6rem;
 }
 
-.signup form input[type=text]:focus, .signup form input[type=password]:focus, .signup form input[type=submit]:focus, .signup form input[type=email]:focus {
+.signup #form input[type=text]:focus, .signup #form input[type=password]:focus, .signup #form input[type=submit]:focus, .signup #form input[type=email]:focus {
   border: 2px solid #7d28c8;
 }
 
-.signup form input[type=text]:focus #usericon {
+.signup #form input[type=text]:focus #usericon {
   color: #7d28c8 !important;
 }
 
-.signup form input[type=submit] {
+.signup #form input[type=submit] {
   font-family: 'DM Sans';
   font-weight: 700;
   font-size: 1.8rem;
@@ -439,13 +439,13 @@ nav ul:last-child li:hover a {
   border-radius: 4px;
 }
 
-.signup form input[type=submit]:hover {
+.signup #form input[type=submit]:hover {
   background-color: #7d28c8 !important;
   -webkit-box-shadow: 5.5303px 12.8614px 27px rgba(0, 0, 0, 0.31);
           box-shadow: 5.5303px 12.8614px 27px rgba(0, 0, 0, 0.31);
 }
 
-.signup form input[type=submit]:active {
+.signup #form input[type=submit]:active {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
   -webkit-box-shadow: 6.25331px 7.8036px 34px rgba(0, 0, 0, 0.2);
@@ -454,7 +454,7 @@ nav ul:last-child li:hover a {
   transition: .01s;
 }
 
-.signup form a {
+.signup #form a {
   width: 100%;
   font-family: 'DM Sans';
   font-weight: 500;
@@ -581,6 +581,40 @@ nav ul:last-child li:hover a {
   transition: .01s;
 }
 
+.signup #form2 a {
+  width: 100%;
+  font-family: 'DM Sans';
+  font-weight: 500;
+  font-size: 1.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #000000;
+}
+
+.signup #form3 {
+  width: 50.1rem;
+  background-color: white;
+  -webkit-box-shadow: 9.39709px 25.3119px 63px rgba(0, 0, 0, 0.01);
+          box-shadow: 9.39709px 25.3119px 63px rgba(0, 0, 0, 0.01);
+  border-radius: 2rem;
+  padding: 3.3rem 3.4rem;
+  display: none;
+  place-items: center;
+  height: 47.8rem;
+}
+
+.signup #form3 h1 {
+  font-family: 'DM Sans';
+  font-weight: bold;
+  font-size: 3.2rem;
+  text-align: center;
+  color: #00C517;
+}
+
 .login {
   position: absolute;
   top: 0;
@@ -595,16 +629,17 @@ nav ul:last-child li:hover a {
   place-items: center;
 }
 
-.login form {
+.login #form4 {
   width: 50.1rem;
   background-color: white;
   -webkit-box-shadow: 9.39709px 25.3119px 63px rgba(0, 0, 0, 0.01);
           box-shadow: 9.39709px 25.3119px 63px rgba(0, 0, 0, 0.01);
   border-radius: 2rem;
   padding: 3.3rem 3.4rem;
+  position: relative;
 }
 
-.login form h3 {
+.login #form4 h3 {
   font-family: 'DM Sans';
   font-weight: 500;
   font-size: 3.2rem;
@@ -612,7 +647,7 @@ nav ul:last-child li:hover a {
   padding-bottom: 4.6rem;
 }
 
-.login form p {
+.login #form4 p {
   position: relative;
   font-family: 'DM Sans';
   font-weight: 400;
@@ -621,7 +656,7 @@ nav ul:last-child li:hover a {
   padding-bottom: .2rem;
 }
 
-.login form p #usericon {
+.login #form4 p #usericon {
   position: absolute;
   font-size: 3rem;
   bottom: -40px;
@@ -629,15 +664,16 @@ nav ul:last-child li:hover a {
   color: #9C9C9C;
 }
 
-.login form p #showpassword {
+.login #form4 p #showpassword2 {
   position: absolute;
   font-size: 3rem;
   bottom: -42px;
   right: 15px;
   color: #9C9C9C;
+  cursor: pointer;
 }
 
-.login form pre {
+.login #form4 pre {
   font-family: 'DM Sans';
   font-weight: 400;
   font-size: 1.2rem;
@@ -645,21 +681,27 @@ nav ul:last-child li:hover a {
   -webkit-transform: translateY(-26px);
           transform: translateY(-26px);
   z-index: 4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.login form input[type=email], .login form input[type=password], .login form input[type=submit] {
+.login #form4 input[type=text], .login #form4 input[type=email], .login #form4 input[type=password], .login #form4 input[type=submit] {
   width: 100%;
   margin-bottom: 3rem;
   padding: 1.5rem 1.5rem 1.5rem 6rem;
   outline: none;
-  border: 1px solid #BABABA;
+  border: 2px solid #BABABA;
   border-radius: .4rem;
   font-family: 'DM Sans';
   font-weight: 400;
   font-size: 1.6rem;
 }
 
-.login form input[type=submit] {
+.login #form4 input[type=submit] {
   font-family: 'DM Sans';
   font-weight: 700;
   font-size: 1.8rem;
@@ -672,13 +714,13 @@ nav ul:last-child li:hover a {
   border-radius: 4px;
 }
 
-.login form input[type=submit]:hover {
+.login #form4 input[type=submit]:hover {
   background-color: #7d28c8 !important;
   -webkit-box-shadow: 5.5303px 12.8614px 27px rgba(0, 0, 0, 0.31);
           box-shadow: 5.5303px 12.8614px 27px rgba(0, 0, 0, 0.31);
 }
 
-.login form input[type=submit]:active {
+.login #form4 input[type=submit]:active {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
   -webkit-box-shadow: 6.25331px 7.8036px 34px rgba(0, 0, 0, 0.2);
@@ -687,7 +729,7 @@ nav ul:last-child li:hover a {
   transition: .01s;
 }
 
-.login form a {
+.login #form4 a {
   width: 100%;
   font-family: 'DM Sans';
   font-weight: 500;
@@ -720,6 +762,16 @@ nav ul:last-child li:hover a {
 }
 
 #loading {
+  position: absolute;
+  z-index: 200;
+  bottom: 60px;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  display: none;
+}
+
+#loading2 {
   position: absolute;
   z-index: 4;
   bottom: 60px;

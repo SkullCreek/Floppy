@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="https://kit.fontawesome.com/b182aa84d1.js" crossorigin="anonymous"></script>
     <title>Floppy</title>
 </head>
@@ -72,23 +73,43 @@
             <button id="verify">Verify</button>
             <a href="#">Change your email?</a>
         </form>
+        <form action="" id="form3" class="animate__animated animate__faster">
+            <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_pghdouhq.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop autoplay></lottie-player>
+            <h1>ACTIVATED</h1>
+        </form>
     </section>
     <section class="login" id="login" >
-        <form id="form2" class="animate__animated animate__faster">
+        <form id="form4" class="animate__animated animate__faster">
             <h3>Login with<br>Floppy.</h3>
-            <p id="email"><span id="usericon" style="font-size: 2.7rem;" class="material-symbols-outlined">alternate_email</span>Email Address</p>
-            <input type="email" class="input" required="required" id="login_email" placeholder="Darpan">
+            <p id="email"><span id="usericon" style="font-size: 2.7rem;" class="material-symbols-outlined icon2">alternate_email</span>Email Address</p>
+            <input type="email" class="input" id="login_email" placeholder="Darpan Bahadur">
             <pre id="login_email_error"></pre>
-            <p id="password"><span id="usericon" style="font-size: 2.7rem;" class="material-symbols-outlined">lock</span><span id="showpassword" class="material-symbols-outlined">visibility</span>Password</p>
-            <input type="password" class="input" required="required" id="login_password" placeholder="Darpan@1977.">
+            <p id="password"><span id="usericon" style="font-size: 2.7rem;" class="material-symbols-outlined icon2">lock</span><span id="showpassword2" class="material-symbols-outlined icon2">visibility_off</span>Password</p>
+            <input type="password" class="input" id="login_password" placeholder="Must have minimum 6 characters">
             <pre id="login_password_error"></pre>
-            <input type="submit"  value="login" style="border: none; background: #9733EE; color: white; ">
+            <input type="submit"  value="Login" style="border: none; background: #9733EE; color: white;" id="loginbtn">
+            <aside id="loading2"><div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div></aside>
             <a href="#">Don't have account? Signup</a>
+        </form>
+        <form action="" id="form2" class="animate__animated animate__faster">
+            <h3>Varification code</h3>
+            <p>Enter the varification code you received to</p>
+            <h4 id="email_id_code"></h4>
+            <div id="otp_input">
+                <input type="number" id="a" name="" class="code" maxlength="1" onkeyup="otp(this, 'b')">
+                <input type="number" id="b" name="" class="code" maxlength="1" onkeyup="otp(this, 'c')">
+                <input type="number" id="c" name="" class="code" maxlength="1" onkeyup="otp(this, 'd')">
+                <input type="number" id="d" name="" class="code" maxlength="1">
+            </div>
+            <h5 id="verify_error"></h5>
+            <button id="verify">Verify</button>
+            <a href="#">Change your email?</a>
         </form>
     </section>
     <script src="src/js/home.js"></script>
     <script src="src/js/ajax_check_user.js"></script>
     <script src="src/js/ajax_signup.js"></script>
     <script src="src/js/otp.js"></script>
+    <script src="src/js/ajax_login.js"></script>
 </body>
 </html>
