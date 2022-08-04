@@ -47,7 +47,27 @@ login_user.onclick= (e) => {
                     document.getElementById("login_password_error").innerHTML = "<span class='material-symbols-outlined' style='color:#B10404;font-size:18px'>warning</span> Wrong password, try again";
                 }
                 if(login_request.response.trim() == "login pending"){
-                    alert("hello");
+                    let form4 = document.getElementById("form4");
+                    let form5 = document.getElementById("form5");
+                    form4.classList.remove("animate__zoomIn");
+                    form4.classList.add("animate__zoomOut");
+                    setTimeout(()=>{
+                        form4.style.display = "none";
+                        form5.style.display = "grid";
+                        form5.classList.remove("animate__zoomOut");
+                        form5.classList.add("animate__zoomIn");
+                        let email_id_code2 = document.getElementById("email_id_code2");
+                        email_id_code2.innerHTML = login_email_check.value;
+                    },500);
+                }
+                if(login_request.response.trim() == "login success"){
+                    window.location = "src/pages/profile.html";
+                }
+                else{
+                    login_email_check.style.border = "2px solid #B10404";
+                    document.getElementsByClassName("icon2")[0].style.color = "#B10404";
+                    document.getElementById("login_email_error").style.color = "#B10404";
+                    document.getElementById("login_email_error").innerHTML = "<span class='material-symbols-outlined' style='color:#B10404;font-size:18px'>warning</span> Something went wrong";
                 }
             }
         }
