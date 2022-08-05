@@ -45,6 +45,10 @@
   --message-btn: rgba(195, 207, 244, 0.1);
 }
 
+html{
+  font-size: 62.5%;
+}
+
 html, body {
   width: 100%;
   height: 100vh;
@@ -306,24 +310,21 @@ button, a {
 
 .projects-status {
   display: flex;
-}
-
-.item-status {
-  display: flex;
-  flex-direction: column;
-  margin-right: 16px;
   
-  &:not(:last-child) .status-type:after {
-    content: '';
-    position: absolute;
-    right: 8px;
-    top: 50%;
-    transform: translatey(-50%);
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    border: 1px solid var(--secondary-color);
-  }
+}
+.add_file{
+  padding: 1rem 2.5rem;
+  background-color: var(--link-color-active-bg);
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  border: none;
+}
+.add_file:active{
+  transform: scale(.9);
 }
 
 .status-number {
@@ -575,8 +576,8 @@ button, a {
 
 .project-box {
   --main-color-card: #dbf6fd;
-  border-radius: 30px;
-  padding: 16px;
+  border-radius: 20px;
+  padding: 25px;
   background-color: var(--main-color-card);
   
   &-header {
@@ -773,7 +774,6 @@ button, a {
     height: 4px;
   }
   
-  .item-status { margin-right: 0; }
 }
 
 @media screen and (max-width: 880px) {
@@ -907,4 +907,11 @@ button, a {
     right: 2px;
     top: 10px;
   }
+}
+
+.file-header{
+  font-weight: 500;
+  font-size: 1.8rem;
+  color: var(--main-color);
+  margin: 0;
 }
