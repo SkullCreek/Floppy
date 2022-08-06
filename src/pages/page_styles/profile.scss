@@ -501,6 +501,7 @@ button, a {
 }
 
 .project-boxes {
+  padding-bottom: 30px;
   margin: 0 -8px;
   overflow-y: auto;
   
@@ -912,6 +913,67 @@ button, a {
 .file-header{
   font-weight: 500;
   font-size: 1.8rem;
-  color: var(--main-color);
+  color: #111827;
   margin: 0;
+}
+
+#starred {
+  width: 100%;
+  padding: 20px 10px;
+  h1{
+    font-weight: 450;
+    font-size: 20px;
+    color: var(--main-color);
+  }
+  #parent-starred-container{
+    width: 100%;
+    padding: 20px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .sub-starred-container{
+      width: 234px;
+      height: 206px;
+      margin-right: 10px;
+      background-color: var(--more-list-bg-hover);
+      border-radius: 10px;
+      aside{
+        width: 100%;
+        height: 166px;
+        border-radius: 10px 10px 0px 0px;
+        
+      }
+      #starred-image{
+        width: 100%;
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10px;
+        h2{
+          font-weight: 400;
+          font-size: 14px;
+          color: var(--main-color);
+        }
+        img{
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+
+
+.project-boxes::-webkit-scrollbar{
+  width: 5px;
+}
+.project-boxes::-webkit-scrollbar-track{
+  width: 5px;
+  background-color: transparent;
+}
+.project-boxes::-webkit-scrollbar-thumb{
+  width: 5px;
+  background: var(--main-color);
+  border-radius: 10px;
 }

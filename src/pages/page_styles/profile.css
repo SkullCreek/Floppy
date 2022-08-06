@@ -640,6 +640,7 @@ button, a {
 }
 
 .project-boxes {
+  padding-bottom: 30px;
   margin: 0 -8px;
   overflow-y: auto;
 }
@@ -1085,7 +1086,85 @@ button, a {
 .file-header {
   font-weight: 500;
   font-size: 1.8rem;
-  color: var(--main-color);
+  color: #111827;
   margin: 0;
+}
+
+#starred {
+  width: 100%;
+  padding: 20px 10px;
+}
+
+#starred h1 {
+  font-weight: 450;
+  font-size: 20px;
+  color: var(--main-color);
+}
+
+#starred #parent-starred-container {
+  width: 100%;
+  padding: 20px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#starred #parent-starred-container .sub-starred-container {
+  width: 234px;
+  height: 206px;
+  margin-right: 10px;
+  background-color: var(--more-list-bg-hover);
+  border-radius: 10px;
+}
+
+#starred #parent-starred-container .sub-starred-container aside {
+  width: 100%;
+  height: 166px;
+  border-radius: 10px 10px 0px 0px;
+}
+
+#starred #parent-starred-container .sub-starred-container #starred-image {
+  width: 100%;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 10px;
+}
+
+#starred #parent-starred-container .sub-starred-container #starred-image h2 {
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--main-color);
+}
+
+#starred #parent-starred-container .sub-starred-container #starred-image img {
+  cursor: pointer;
+}
+
+.project-boxes::-webkit-scrollbar {
+  width: 5px;
+}
+
+.project-boxes::-webkit-scrollbar-track {
+  width: 5px;
+  background-color: transparent;
+}
+
+.project-boxes::-webkit-scrollbar-thumb {
+  width: 5px;
+  background: var(--main-color);
+  border-radius: 10px;
 }
 /*# sourceMappingURL=profile.css.map */
