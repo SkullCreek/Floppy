@@ -1167,4 +1167,138 @@ button, a {
   background: var(--main-color);
   border-radius: 10px;
 }
+
+.projects-section-header #storage-heading {
+  padding-bottom: 40px;
+}
+
+.projects-section-header .storage {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.projects-section-header ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 !important;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  list-style: none;
+}
+
+.projects-section-header ul li {
+  font-family: 'DM Sans';
+  font-weight: 700;
+  font-size: 14px;
+  color: #757575;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.projects-section-header ul li p {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.circular-progress {
+  position: relative;
+  display: inline-block;
+  width: 40vh;
+  height: 40vh;
+  border-radius: 50%;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+.circular-progress svg {
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+.circular-progress circle {
+  stroke-width: 12;
+  fill: none;
+  stroke-linecap: round;
+}
+
+.circular-progress circle:nth-of-type(1) {
+  stroke: #dee2e6;
+}
+
+.circular-progress circle:nth-of-type(2) {
+  stroke: #058EED;
+  stroke-dasharray: 251.42857;
+  stroke-dashoffset: 75.42857;
+}
+
+.circular-progress circle:nth-of-type(3) {
+  stroke: #FF6A4A;
+  stroke-dasharray: 251.42857;
+  stroke-dashoffset: 150.85714;
+}
+
+.circular-progress circle:nth-of-type(4) {
+  stroke: #F6B100;
+  stroke-dasharray: 251.42857;
+  stroke-dashoffset: 201.14286;
+}
+
+.circular-progress .pct {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-family: 'DM Sans';
+  font-weight: 700;
+  font-size: 14px;
+  color: #757575;
+  text-align: center;
+}
+
+.circular-progress .pct span {
+  font-weight: bold;
+  color: #111827;
+}
+
+#upgrade {
+  width: 100%;
+  height: 99px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+#upgrade button {
+  width: 100%;
+  border: none;
+  padding: 2rem 6rem;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  color: white;
+  background-color: #34C471;
+  border-radius: 8px;
+}
 /*# sourceMappingURL=profile.css.map */

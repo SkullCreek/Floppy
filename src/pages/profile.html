@@ -266,8 +266,33 @@
             <line x1="15" y1="9" x2="9" y2="15" />
             <line x1="9" y1="9" x2="15" y2="15" /></svg>
         </button>
-        <div class="projects-section-header">
-          <p>Storage</p>
+        <div class="projects-section-header" style="  display: flex;flex-direction: column;">
+          <p id="storage-heading">Storage</p>
+          <section class="storage">
+            <div class="circular-progress">
+              <svg 
+                xmlns='http://www.w3.org/2000/svg'
+                viewBox='0 0 100 100'
+                aria-labelledby='title' role='graphic'>
+                <title id='title'>svg circular progress bar</title>
+                <circle cx="50" cy="50" r="40" ></circle>
+                <circle cx="50" cy="50" r="40" id='pct-ind'></circle>
+                <circle cx="50" cy="50" r="40" id='pct-ind'></circle>
+                <circle cx="50" cy="50" r="40" id='pct-ind'></circle>
+              </svg>
+              <p class="pct">Total Storage <br><span>200 MB</span></p>
+            </div>
+          </section>
+          <ul style="margin-bottom: 50px;">
+            <li><p style="background-color: #dee2e6;"></p>Total</li>
+            <li><p style="background-color: #058EED;"></p>Images</li>
+            <li><p style="background-color: #FF6A4A;"></p>PDF</li>
+            <li><p style="background-color: #F6B100;"></p>Others</li>
+          </ul>
+          <aside id="upgrade">
+            <button>Upgrade Now</button>
+          </aside>
+          
         </div>
       </div>
     </div>
