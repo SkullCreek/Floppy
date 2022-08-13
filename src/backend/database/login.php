@@ -12,6 +12,8 @@
             $response_status = $db->query($login_user_verified);
             if($response_status->num_rows != 0){
                 echo "login success";
+                session_start();
+                $_SESSION['email'] = $email;
             }
             else{
                 echo "login pending";

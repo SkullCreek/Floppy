@@ -494,7 +494,7 @@ button, a {
 .messages-section {
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  padding-bottom: 32px;
+  padding-bottom: 30px;
   background-color: var(--projects-section);
   margin-left: 24px;
   -webkit-box-flex: 1;
@@ -1163,6 +1163,21 @@ button, a {
 }
 
 .project-boxes::-webkit-scrollbar-thumb {
+  width: 5px;
+  background: var(--main-color);
+  border-radius: 10px;
+}
+
+.messages-section::-webkit-scrollbar {
+  width: 5px;
+}
+
+.messages-section::-webkit-scrollbar-track {
+  width: 5px;
+  background-color: transparent;
+}
+
+.messages-section::-webkit-scrollbar-thumb {
   width: 5px;
   background: var(--main-color);
   border-radius: 10px;

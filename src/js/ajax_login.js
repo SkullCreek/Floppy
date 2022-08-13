@@ -61,7 +61,7 @@ login_user.onclick= (e) => {
                     },500);
                 }
                 if(login_request.response.trim() == "login success"){
-                    window.location = "src/pages/profile.html";
+                    window.location = "src/pages/profile.php";
                 }
                 else{
                     login_email_check.style.border = "2px solid #B10404";
