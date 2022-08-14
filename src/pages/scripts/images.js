@@ -14,7 +14,7 @@ add_image.onclick = () => {
         })
         .then((response) => response.text())
         .then((data) => {
-            console.log(data);
+            alert(data);
         })
         .catch((error) => {
             alert(error);
