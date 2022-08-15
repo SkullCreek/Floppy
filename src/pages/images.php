@@ -152,17 +152,13 @@
                   <title id='title'>svg circular progress bar</title>
                   <circle cx="50" cy="50" r="40" ></circle>
                   <circle cx="50" cy="50" r="40" id='pct-ind'></circle>
-                  <circle cx="50" cy="50" r="40" id='pct-ind'></circle>
-                  <circle cx="50" cy="50" r="40" id='pct-ind'></circle>
                 </svg>
-                <p class="pct">Total Storage <br><span>200 MB</span></p>
+                <p class="pct">Total Storage <br><span id = "storage-left">0.36 MB / 10 MB</span></p>
               </div>
             </section>
             <ul style="margin-bottom: 50px;">
               <li><p style="background-color: #dee2e6;"></p>Total</li>
               <li><p style="background-color: #058EED;"></p>Images</li>
-              <li><p style="background-color: #FF6A4A;"></p>PDF</li>
-              <li><p style="background-color: #F6B100;"></p>Others</li>
             </ul>
             <aside id="upgrade">
               <button>Upgrade Now</button>
