@@ -38,14 +38,28 @@ const memory_status = () => {
             const pctIndicator = document.querySelector('#pct-ind');
             const p = ( 1 - httpreq.responseText / 10 ) * (2 * (22 / 7) * 40);
             if( p > 8 ){
-                pctIndicator.style = `stroke: #FF6A4A;`
+                pctIndicator.style = `stroke: #FF6A4A;`;
             }
             else{
-                pctIndicator.style = `stroke: #058EED;`
+                pctIndicator.style = `stroke: #058EED;`;
                 
             }
-            pctIndicator.style = `stroke-dashoffset: ${p};`
+            pctIndicator.style = `stroke-dashoffset: ${p};`;
+            showing_image();
         }
     }
 }
 memory_status();
+
+const showing_image = () => {
+    let httpreq = new XMLHttpRequest();
+    httpreq.open("GET","pages_backend/show_image.php",true);
+    httpreq.send();
+    httpreq.onreadystatechange = () => {
+        if(httpreq.readyState == 4 && httpreq.status == 200){
+            let showing_div = document.getElementById("parent-starred-container");
+            showing_div.innerHTML = "";
+            showing_div.innerHTML += httpreq.responseText;
+        }
+    }
+}

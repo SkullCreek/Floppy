@@ -1118,6 +1118,7 @@ button, a {
   width: 234px;
   height: 206px;
   margin-right: 10px;
+  margin-bottom: 40px;
   background-color: var(--more-list-bg-hover);
   border-radius: 10px;
 }
@@ -1151,6 +1152,33 @@ button, a {
 
 #starred #parent-starred-container .sub-starred-container #starred-image img {
   cursor: pointer;
+}
+
+#images-section {
+  width: 100%;
+  padding: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow-y: scroll;
+}
+
+#images-section::-webkit-scrollbar {
+  width: 5px;
+}
+
+#images-section::-webkit-scrollbar-track {
+  width: 5px;
+  background-color: transparent;
+}
+
+#images-section::-webkit-scrollbar-thumb {
+  width: 5px;
+  background: var(--main-color);
+  border-radius: 10px;
 }
 
 .project-boxes::-webkit-scrollbar {
