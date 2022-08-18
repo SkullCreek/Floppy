@@ -63,3 +63,13 @@ const showing_image = () => {
         }
     }
 }
+
+const date_month = () => {
+    let date = new Date();
+    const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+    document.getElementById("date_month").innerHTML = `${month[date.getMonth()]}, ${date.getDate()}`;
+}
+
+date_month();
+
+

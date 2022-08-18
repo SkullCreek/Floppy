@@ -374,7 +374,6 @@ button, a {
 
 .messages-section {
   flex-shrink: 0;
-  padding-bottom: 30px;
   background-color: var(--projects-section);
   margin-left: 24px;
   flex: 1;
@@ -618,21 +617,6 @@ button, a {
   background-color: transparent;
   border: none;
   flex-shrink: 0;
-  
-  /*&:after, &:before {
-    content: '';
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background-color: var(--main-color);
-    opacity: .8;
-    left: 50%;
-    transform: translatex(-50%);
-  }
-  
-  &:before { top: 0;}
-  &:after { bottom: 0; }*/
 }
 
 .more-wrapper {
@@ -951,9 +935,12 @@ button, a {
         justify-content: space-between;
         align-items: center;
         padding: 0 10px;
-        h2{
+        pre{
+          width: 100px;
+          overflow: hidden;
           font-weight: 400;
           font-size: 14px;
+          font-family: 'DM Sans';
           color: var(--main-color);
         }
         img{
@@ -964,6 +951,65 @@ button, a {
   }
 }
 
+.star-icon{
+  color:rgb(92, 92, 92)!important;
+  width:15px;
+  height:15px;
+  cursor: pointer;
+}
+.star-icon:hover{
+  transform: scale(1.15);
+  color: #F6B100!important;
+}
+
+.save-icon{
+  color:rgb(92, 92, 92)!important;
+  width:15px;
+  height:15px;
+  display: none;
+  cursor: pointer;
+}
+.save-icon:hover{
+  transform: scale(1.15);
+  color: green!important;
+}
+
+.delete-icon{
+  color:rgb(92, 92, 92)!important;
+  width:15px;
+  height:15px;
+  cursor: pointer;
+}
+.delete-icon:hover{
+  transform: scale(1.15);
+  color: red!important;
+}
+
+.download-icon{
+  color:rgb(92, 92, 92)!important;
+  width:15px;
+  height:15px;
+  cursor: pointer;
+}
+.download-icon:hover{
+  transform: scale(1.15);
+  color: green!important;
+}
+
+.edit-icon{
+  color:rgb(92, 92, 92)!important;
+  width:15px;
+  height:15px;
+  cursor: pointer;
+}
+.edit-icon:hover{
+  transform: scale(1.15);
+  color: #058EED!important;
+}
+#image_name:focus{
+  outline: 1px dashed rgb(92, 92, 92);
+  padding: 2px;
+}
 #images-section{
   width: 100%;
   padding: 32px;

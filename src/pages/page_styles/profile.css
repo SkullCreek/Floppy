@@ -494,7 +494,6 @@ button, a {
 .messages-section {
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  padding-bottom: 30px;
   background-color: var(--projects-section);
   margin-left: 24px;
   -webkit-box-flex: 1;
@@ -786,20 +785,6 @@ button, a {
   border: none;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  /*&:after, &:before {
-    content: '';
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background-color: var(--main-color);
-    opacity: .8;
-    left: 50%;
-    transform: translatex(-50%);
-  }
-  
-  &:before { top: 0;}
-  &:after { bottom: 0; }*/
 }
 
 .more-wrapper {
@@ -1144,14 +1129,88 @@ button, a {
   padding: 0 10px;
 }
 
-#starred #parent-starred-container .sub-starred-container #starred-image h2 {
+#starred #parent-starred-container .sub-starred-container #starred-image pre {
+  width: 100px;
+  overflow: hidden;
   font-weight: 400;
   font-size: 14px;
+  font-family: 'DM Sans';
   color: var(--main-color);
 }
 
 #starred #parent-starred-container .sub-starred-container #starred-image img {
   cursor: pointer;
+}
+
+.star-icon {
+  color: #5c5c5c !important;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.star-icon:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+  color: #F6B100 !important;
+}
+
+.save-icon {
+  color: #5c5c5c !important;
+  width: 15px;
+  height: 15px;
+  display: none;
+  cursor: pointer;
+}
+
+.save-icon:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+  color: green !important;
+}
+
+.delete-icon {
+  color: #5c5c5c !important;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.delete-icon:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+  color: red !important;
+}
+
+.download-icon {
+  color: #5c5c5c !important;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.download-icon:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+  color: green !important;
+}
+
+.edit-icon {
+  color: #5c5c5c !important;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.edit-icon:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+  color: #058EED !important;
+}
+
+#image_name:focus {
+  outline: 1px dashed #5c5c5c;
+  padding: 2px;
 }
 
 #images-section {

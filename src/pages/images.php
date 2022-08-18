@@ -101,7 +101,7 @@
         <div class="projects-section">
           <div class="projects-section-header">
             <p>Files</p>
-            <p class="time">December, 12</p>
+            <p class="time" id="date_month">December, 12</p>
           </div>
           <div class="projects-section-line">
             <div class="projects-status">
@@ -134,13 +134,7 @@
           <div id="images-section">
             <section id="starred">
               <div id="parent-starred-container">
-                <div class="sub-starred-container">
-                  <aside style="background: url(../images/starred/fox.jpg) center center no-repeat;background-size: cover;"></aside>
-                  <div id="starred-image">
-                    <h2>Fox.jpg</h2>
-                    <img src="../images/starred/star.svg" alt="">
-                  </div>
-                </div>
+                
               </div>
             </section>
           </div>
@@ -182,6 +176,7 @@
     </div>
     <script src="scripts/profile.js"></script>
     <script src="scripts/images.js"></script>
+    <script src="scripts/edit-image.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script>
