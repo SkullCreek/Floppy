@@ -17,7 +17,20 @@ addEventListener('DOMContentLoaded', () => {
                 httpreq.send();
                 httpreq.onreadystatechange = () => {
                     if(httpreq.readyState == 4 && httpreq.status == 200){
-                        alert(httpreq.responseText);
+                        if(httpreq.responseText.trim() == "error"){
+                            alert("Something went Wrong");
+                        }
+                        else if(httpreq.responseText.trim() == "File Already Exists"){
+                            alert("File Already Exists")
+                        }
+                        else{
+                            pre.contentEditable = "false";
+                            save_icon.style.display = "none";
+                            image[i].style.display = "block";
+                            image[i].removeAttribute("data-location");
+                            alert(httpreq.responseText);
+                            image[i].setAttribute("data-location",httpreq.responseText);
+                        }
                     }
                 }
             }
