@@ -16,6 +16,7 @@ add_image.onclick = () => {
         .then((data) => {
             if(data.trim() == "success"){
                 memory_status();
+                history.go(0);
             }
             else{
                 alert(data);
@@ -71,5 +72,4 @@ const date_month = () => {
 }
 
 date_month();
-
 
