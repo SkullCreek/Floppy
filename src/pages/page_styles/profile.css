@@ -1403,4 +1403,44 @@ button, a {
   background-color: #34C471;
   border-radius: 8px;
 }
+
+.magify {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.27);
+  place-items: center;
+  display: none;
+}
+
+.magify-image {
+  width: 80vw;
+  height: 80vh;
+  background-color: #ffffff;
+  position: relative;
+  z-index: 20;
+}
+
+.magify-image2 {
+  position: absolute;
+  width: 80vw;
+  height: 80vh;
+  background-color: #ffffff;
+  z-index: -2;
+}
+
+.close-icon {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  color: #c3c3c3;
+}
+
+.stored-image {
+  cursor: pointer;
+}
 /*# sourceMappingURL=profile.css.map */

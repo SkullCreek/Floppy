@@ -20,6 +20,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="page_styles/profile.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <title>Floppy | Profile</title>
   </head>
 
@@ -173,7 +177,15 @@
           </div>
         </div>
       </div>
+      <div class="magify">
+        <div class="magify-image animate__animated animate__bounceIn">
+          
+          <i class="close-icon" data-feather="x-circle"></i>
+        </div>
+        <div class="magify-image2 animate__animated animate__bounceIn"></div>
+      </div>
     </div>
+    
     <script src="scripts/profile.js"></script>
     <script src="scripts/images.js"></script>
     <script src="scripts/edit-image.js"></script>

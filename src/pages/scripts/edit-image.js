@@ -66,7 +66,10 @@ addEventListener('DOMContentLoaded', () => {
                 httpreq.send();
                 httpreq.onreadystatechange = () => {
                     if(httpreq.readyState == 4 && httpreq.status == 200){
-                        alert(httpreq.responseText);
+                        if(httpreq.responseText.trim() == "Delete Success"){
+                            del_btn[i].parentElement.parentElement.style.display = "none";
+                            history.go(0);
+                        }
                     }
                 }
             } 
@@ -74,4 +77,24 @@ addEventListener('DOMContentLoaded', () => {
         
     }
     del();
+    const magnify_image = () => {
+        const image_btn = document.getElementsByClassName("stored-image");
+        for(let i=0;i<image_btn.length;i++){
+            image_btn[i].onclick = () => {
+                let image_path = image_btn[i].getAttribute("data-location");
+                const search2 = '~';
+                const replaceWith2 = ' ';
+                const actual_location2 = image_path.split(search2).join(replaceWith2);
+                let actual_path = actual_location2.replace("../../../","../../");
+                document.getElementsByClassName("magify")[0].style.display = "grid";
+                document.getElementsByClassName("magify-image")[0].style.background = "url('"+ actual_path +"') center center no-repeat";
+                document.getElementsByClassName("magify-image")[0].style.backgroundSize = "contain";
+                document.getElementsByClassName("close-icon")[0].onclick = () => {
+                    document.getElementsByClassName("magify")[0].style.display = "none";
+                }
+            }
+        }
+    }
+    
+    magnify_image();
 });

@@ -16,7 +16,7 @@
       $new_path = str_replace("../","",$data_image['image_path']);
       $old_path = str_replace(" ","~",$data_image['image_path']);
       $div = '<div class="sub-starred-container">
-      <aside style="background: url(\'../../'.$new_path.'\') center center no-repeat;background-size: cover;"></aside>
+      <aside class="stored-image" data-location='.$old_path.' style="background: url(\'../../'.$new_path.'\') center center no-repeat;background-size: cover;"></aside>
       <div id="starred-image">
           <pre id="image_name">'.$image_name.'</pre>
           <i class="star-icon" data-feather="star" data-location='.$old_path.'></i>
