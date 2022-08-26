@@ -172,7 +172,7 @@
               <li><p style="background-color: #058EED;"></p>Images</li>
             </ul>
             <aside id="upgrade">
-              <button>Upgrade Now</button>
+              <button id="upgrade-btn" amount="500" plan="exclusive">Upgrade Now</button>
             </aside>
           </div>
         </div>
@@ -187,6 +187,7 @@
     </div>
     
     <script src="scripts/profile.js"></script>
+    <script src="scripts/payment-gateway.js"></script>
     <script src="scripts/images.js"></script>
     <script src="scripts/edit-image.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
